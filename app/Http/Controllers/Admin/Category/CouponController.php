@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin\Category;
-use DB;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -27,8 +27,8 @@ class CouponController extends Controller
             'messege'=>'Coupon Inserted Successfully',
             'alert-type'=>'success'
              );
-           return Redirect()->back()->with($notification); 
- 
+           return Redirect()->back()->with($notification);
+
   }
 
  public function deleteCoupon($id){
@@ -37,7 +37,7 @@ class CouponController extends Controller
             'messege'=>'Coupon Deleted Successfully',
             'alert-type'=>'success'
              );
-           return Redirect()->back()->with($notification);  
+           return Redirect()->back()->with($notification);
 
  }
 
@@ -58,11 +58,11 @@ class CouponController extends Controller
             'messege'=>'Coupon Updated Successfully',
             'alert-type'=>'success'
              );
-           return Redirect()->route('admin.coupon')->with($notification); 
+           return Redirect()->route('admin.coupon')->with($notification);
 
  }
 
- 
+
  public function newslater(){
  	$sub = DB::table('newslaters')->get();
  	return view('admin.coupon.newslater',compact('sub'));
