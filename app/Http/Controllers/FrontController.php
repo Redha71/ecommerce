@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+
+use Illuminate\Support\Facades\DB ;
+
 class FrontController extends Controller
 {
     public function StoreNewslater(Request $request){
@@ -18,8 +20,12 @@ class FrontController extends Controller
             'messege'=>'Thanks for Subscribing',
             'alert-type'=>'success'
              );
-           return Redirect()->back()->with($notification); 	
+           return Redirect()->back()->with($notification);
 
+    }
+    public function testcode()
+    {
+        return view('testcode');
     }
 
 }

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Image;
+use  Intervention\Image\ImageServiceProvider\Image;
 class ProductController extends Controller
 {
     public function __construct()
@@ -43,7 +43,9 @@ class ProductController extends Controller
 
 
   public function store(Request $request){
-
+    $validateData = $request->validate([
+        'product_name' => 'required|unique:categories|max:255',
+         ]);
     $data = array();
     $data['product_name'] = $request->product_name;
     $data['product_code'] = $request->product_code;
