@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use  Intervention\Image\ImageServiceProvider\Image;
+use Image;
 class ProductController extends Controller
 {
     public function __construct()
@@ -40,7 +40,6 @@ class ProductController extends Controller
    	return json_encode($cat);
 
    }
-
 
   public function store(Request $request){
     $validateData = $request->validate([

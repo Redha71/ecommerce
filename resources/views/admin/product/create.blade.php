@@ -154,8 +154,8 @@
                 <div class="form-group">
                   <label class="form-control-label">Image One ( Main Thumbnali): <span class="tx-danger">*</span></label></br>
                  <label class="custom-file">
-          <input type="file" id="file" class="custom-file-input" name="image_one" onchange="readURL(this);" required
-          placeholder="Image One" oninvalid="this.setCustomValidity('Select Thumbnali Image')"
+          <input type="file" id="file" class="custom-file-input" name="image_one" onchange="readURL(this);"
+          placeholder="Image One"   required oninvalid="this.setCustomValidity('Select Thumbnali Image')"
         oninput="this.setCustomValidity('')">
           <span class="custom-file-control"></span>
         <img src="#" id="one" style="display:none;" >
@@ -169,7 +169,9 @@
                 <div class="form-group">
                   <label class="form-control-label">Image Two: <span class="tx-danger">*</span></label>
                  <label class="custom-file">
-          <input type="file" id="file" class="custom-file-input" name="image_two" onchange="readURL2(this);" required="">
+          <input type="file" id="file" class="custom-file-input" name="image_two" onchange="readURL2(this);" required
+          oninvalid="this.setCustomValidity(' Image 2')"
+          oninput="this.setCustomValidity('')">
           <span class="custom-file-control"></span>
           <img src="#" id="two" style="display:none;">
             </label>
@@ -184,7 +186,9 @@
                 <div class="form-group">
                   <label class="form-control-label">Image Three: <span class="tx-danger">*</span></label>
                  <label class="custom-file">
-          <input type="file" id="file" class="custom-file-input" name="image_three" onchange="readURL3(this);" required="">
+          <input type="file" id="file" class="custom-file-input" name="image_three" onchange="readURL3(this);" required
+           oninvalid="this.setCustomValidity(' Image 3')"
+          oninput="this.setCustomValidity('')">
           <span class="custom-file-control"></span>
           <img src="#" id="three" style="display:none;">
             </label>
