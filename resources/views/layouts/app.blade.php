@@ -19,12 +19,14 @@
 </head>
 
 <body>
-
+    @php
+    $category=DB::table('categories')->get();
+@endphp
 
 <div class="super_container">
-    
+
     <!-- Header -->
-    
+
     <header class="header">
 
         <!-- Top Bar -->
@@ -64,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-            </div>      
+            </div>
         </div>
 
         <!-- Header Main -->
@@ -91,13 +93,12 @@
                                             <div class="custom_dropdown_list">
                                                 <span class="custom_dropdown_placeholder clc">All Categories</span>
                                                 <i class="fas fa-chevron-down"></i>
+
                                                 <ul class="custom_list clc">
-                                                    <li><a class="clc" href="#">All Categories</a></li>
-                                                    <li><a class="clc" href="#">Computers</a></li>
-                                                    <li><a class="clc" href="#">Laptops</a></li>
-                                                    <li><a class="clc" href="#">Cameras</a></li>
-                                                    <li><a class="clc" href="#">Hardware</a></li>
-                                                    <li><a class="clc" href="#">Smartphones</a></li>
+                                                    @foreach ($category as $row)
+                                                      <li><a class="clc" href="#">{{ $row->category_name }}</a></li>
+                                                    @endforeach
+
                                                 </ul>
                                             </div>
                                         </div>
@@ -137,7 +138,7 @@
                 </div>
             </div>
         </div>
-  
+
 
   @yield('content')
 
@@ -224,11 +225,11 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    
+
                     <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
                         <div class="copyright_content"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
-All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> 
+Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i>
 by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </div>
@@ -264,7 +265,7 @@ by <a href="https://colorlib.com" target="_blank">Colorlib</a>
     <script src="{{ asset('https://unpkg.com/sweetalert/dist/sweetalert.min.js')}}"></script>
 
 <script>
-    
+
     @if (Session::has('messege'))
       var type="{{Session::get('alert-type','info')}}"
       switch(type){
