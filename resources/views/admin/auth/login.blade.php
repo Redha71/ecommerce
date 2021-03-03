@@ -1,7 +1,7 @@
 @extends('admin.admin_layouts')
 
 @section('admin_content')
-    
+
 
 
     <div class="d-flex align-items-center justify-content-center bg-sl-primary ht-100v">
@@ -10,7 +10,7 @@
         <div class="signin-logo tx-center tx-24 tx-bold tx-inverse">Easy <span class="tx-info tx-normal">Learning</span></div>
         <div class="tx-center mg-b-60">Ecommerce Project</div>
 
-   <form action="{{ route('admin.login')}}" method="post"> 
+   <form action="{{ route('admin.login')}}" method="post">
     @csrf
         <div class="form-group">
           <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email Address">
@@ -35,7 +35,7 @@
         </div><!-- form-group -->
         <button type="submit" class="btn btn-info btn-block">Sign In</button>
      </form>
-        
+
       </div><!-- login-wrapper -->
     </div><!-- d-flex -->
 
