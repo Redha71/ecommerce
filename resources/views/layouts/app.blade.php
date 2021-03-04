@@ -16,6 +16,9 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('public/frontend/styles/responsive.css') }}">
 <!-- chart -->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
+<link rel="stylesheet" href="sweetalert2.min.css">
+
+<script src="https://js.stripe.com/v3/"></script>
 </head>
 
 <body>
@@ -48,20 +51,33 @@
                                             <li><a href="#">Japanese</a></li>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>
-                                        <ul>
-                                            <li><a href="#">EUR Euro</a></li>
-                                            <li><a href="#">GBP British Pound</a></li>
-                                            <li><a href="#">JPY Japanese Yen</a></li>
-                                        </ul>
-                                    </li>
+
                                 </ul>
                             </div>
                             <div class="top_bar_user">
-                                <div class="user_icon"><img src="{{ asset('public/frontend/images/user.svg')}}" alt=""></div>
-                                <div><a href="{{route('register')}}">Register</a></div>
-                                <div><a href="{{route('login')}}">Sign in</a></div>
+                                @guest
+                                    <div class="user_icon"><img src="{{ asset('public/frontend/images/user.svg')}}" alt=""></div>
+                                    <div><a href="{{route('login')}}">Register/Login</a></div>
+                                @else
+                                    <ul class="standard_dropdown top_bar_dropdown">
+                                        <li>
+                                            <a href="{{ route('home') }}">
+                                                <div class="user_icon">
+                                                    <img src="{{ asset('public/frontend/images/user.svg')}}" alt="">
+                                                </div>Profile
+                                                <i class="fas fa-chevron-down"></i>
+                                            </a>
+                                            <ul>
+                                                <li><a href="#">Wishlist</a></li>
+                                                <li><a href="#">Checkout</a></li>
+                                                <li><a href="#">Others</a></li>
+                                                <li><a href="{{ route('user.logout') }}">Logout</a></li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                @endguest
+
                             </div>
                         </div>
                     </div>
@@ -102,7 +118,8 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <button type="submit" class="header_search_button trans_300" value="Submit"><img src="{{ asset('public/frontend/images/search.png')}}" alt=""></button>
+                                        <button type="submit" class="header_search_button trans_300" value="Submit">
+                                            <img src="{{ asset('public/frontend/images/search.png')}}" alt=""></button>
                                     </form>
                                 </div>
                             </div>
@@ -124,7 +141,7 @@
                             <div class="cart">
                                 <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                                     <div class="cart_icon">
-                                        <img src="images/cart.png" alt="">
+                                        <img src="public/frontend/images/cart.png" alt="">
                                         <div class="cart_count"><span>10</span></div>
                                     </div>
                                     <div class="cart_content">
@@ -248,6 +265,12 @@ by <a href="https://colorlib.com" target="_blank">Colorlib</a>
     </div>
 </div>
 
+
+
+
+
+
+
 <script src="{{ asset('public/frontend/js/jquery-3.3.1.min.js')}}"></script>
 <script src="{{ asset('public/frontend/styles/bootstrap4/popper.js')}}"></script>
 <script src="{{ asset('public/frontend/styles/bootstrap4/bootstrap.min.js')}}"></script>
@@ -260,30 +283,67 @@ by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <script src="{{ asset('public/frontend/plugins/slick-1.8.0/slick.js')}}"></script>
 <script src="{{ asset('public/frontend/plugins/easing/easing.js')}}"></script>
 <script src="{{ asset('public/frontend/js/custom.js')}}"></script>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
-    <script src="{{ asset('https://unpkg.com/sweetalert/dist/sweetalert.min.js')}}"></script>
 
-<script>
+<script src="{{ asset('public/frontend/js/product_custom.js')}}"></script>
 
-    @if (Session::has('messege'))
-      var type="{{Session::get('alert-type','info')}}"
-      switch(type){
-          case 'info':
-               toastr.info("{{ Session::get('messege') }}");
-               break;
-          case 'success':
-              toastr.success("{{ Session::get('messege') }}");
-              break;
-          case 'warning':
-             toastr.warning("{{ Session::get('messege') }}");
-              break;
-          case 'error':
-              toastr.error("{{ Session::get('messege') }}");
-              break;
-      }
-    @endif
+
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="{{ asset('https://unpkg.com/sweetalert/dist/sweetalert.min.js')}}"></script>
+
+
+ <script>
+        @if(Session::has('messege'))
+          var type="{{Session::get('alert-type','info')}}"
+          switch(type){
+              case 'info':
+                   toastr.info("{{ Session::get('messege') }}");
+                   break;
+              case 'success':
+                  toastr.success("{{ Session::get('messege') }}");
+                  break;
+              case 'warning':
+                 toastr.warning("{{ Session::get('messege') }}");
+                  break;
+              case 'error':
+                  toastr.error("{{ Session::get('messege') }}");
+                  break;
+          }
+        @endif
+     </script>
+
+
+ <script>
+         $(document).on("click", "#return", function(e){
+             e.preventDefault();
+             var link = $(this).attr("href");
+                swal({
+                  title: "Are you Want to Return?",
+                  text: "Once Teturn, this will return your money!",
+                  icon: "warning",
+                  buttons: true,
+                  dangerMode: true,
+                })
+                .then((willDelete) => {
+                  if (willDelete) {
+                       window.location.href = link;
+                  } else {
+                    swal("Cancel!");
+                  }
+                });
+            });
     </script>
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
