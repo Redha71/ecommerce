@@ -212,10 +212,12 @@ $slider = DB::table('products')
         <div class="banner_background" style="background-image:url({{ asset('public/frontend/images/banner_background.jpg')}})"></div>
         <div class="container fill_height">
             <div class="row fill_height">
-                <div class="banner_product_image"><img src="{{ asset($slider->image_one)}}" alt="" style="height:450px;"></div>
+                <div class="banner_product_image"><a href="{{ url('product/details/'.$slider->id.'/'.$slider->product_name) }}">
+                    <img src="{{ asset($slider->image_one)}}" alt="" style="height:450px;"></a></div>
                 <div class="col-lg-5 offset-lg-4 fill_height">
                     <div class="banner_content">
-                        <h1 class="banner_text">{{ $slider->product_name }}</h1>
+                        <h1 class="banner_text"><a href="{{ url('product/details/'.$slider->id.'/'.$slider->product_name) }}">
+                            {{ $slider->product_name }}</a></h1>
                         <div class="banner_price">
                              @if ($slider->discount_price==NULL)
                                <h2>£{{ $slider->selling_price }}</h2>

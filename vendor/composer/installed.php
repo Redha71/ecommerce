@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '579fd281dc0b9fbd4b511c20eb7a486b33be1cc3',
+    'reference' => '90593d1803e1a33e5b5a4c3c3364ae1b0e0abb1a',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -386,6 +386,15 @@
         0 => '*',
       ),
     ),
+    'lamalama/laravel-wishlist' => 
+    array (
+      'pretty_version' => '0.2.1',
+      'version' => '0.2.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'cb0438d97f6d303dbbadd9259d0042fb4e438f49',
+    ),
     'laravel/framework' => 
     array (
       'pretty_version' => 'v6.20.16',
@@ -395,6 +404,15 @@
       ),
       'reference' => '806082fb559fe595cb17cd6aa8571f03ed287814',
     ),
+    'laravel/helpers' => 
+    array (
+      'pretty_version' => 'v1.4.1',
+      'version' => '1.4.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'febb10d8daaf86123825de2cb87f789a3371f0ac',
+    ),
     'laravel/laravel' => 
     array (
       'pretty_version' => 'dev-master',
@@ -402,7 +420,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '579fd281dc0b9fbd4b511c20eb7a486b33be1cc3',
+      'reference' => '90593d1803e1a33e5b5a4c3c3364ae1b0e0abb1a',
     ),
     'laravel/tinker' => 
     array (

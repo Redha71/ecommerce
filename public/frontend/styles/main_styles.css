@@ -115,14 +115,7 @@ p a:hover::after
 {
 	opacity: 0.2;
 }
-::selection
-{
-	
-}
-p::selection
-{
-	
-}
+
 h1{font-size: 48px;}
 h2{font-size: 36px;}
 h3{font-size: 24px;}
@@ -136,15 +129,7 @@ h1, h2, h3, h4, h5, h6
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
-h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
-h6::selection
-{
-	
-}
+
 .form-control
 {
 	color: #db5246;
@@ -580,15 +565,15 @@ section
 	line-height: 50px;
 	color: #a3a3a3 !important;
 }
-.header_search_input::-moz-placeholder /* Firefox 19+ */ 
+.header_search_input::-moz-placeholder /* Firefox 19+ */
 {
 	font-size: 16px !important;
 	font-weight: 300;
 	line-height: 50px;
 	color: #a3a3a3 !important;
-} 
+}
 .header_search_input:-ms-input-placeholder
-{ 
+{
 	font-size: 16px !important;
 	font-weight: 300;
 	line-height: 50px;
@@ -645,10 +630,7 @@ section
 	line-height: 48px;
 	cursor: pointer;
 }
-.custom_dropdown_placeholder i
-{
-	
-}
+
 .custom_list
 {
 	text-align: left;
@@ -1700,7 +1682,7 @@ select option
 .product_name div
 {
 	width: 100%;
-	
+
 }
 .product_name div a
 {
@@ -1887,7 +1869,7 @@ select option
 	height: 36px;
 	background: #FFFFFF;
 	box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
-	border-radius: 50%;
+	border-radius: 00%;
 	visibility: hidden;
 	opacity: 0;
 	-webkit-transition: all 200ms ease;
@@ -1895,6 +1877,9 @@ select option
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
+}
+.addwishlist{
+    border: 0px;
 }
 .product_fav:hover
 {
@@ -1984,7 +1969,7 @@ select option
 {
 	display: inline-block;
 	visibility: visible;
-	opacity: 1;	
+	opacity: 1;
 }
 
 /*********************************
@@ -2422,7 +2407,7 @@ select option
 {
 	margin-top: 9px;
 }
-.arrivals_single_marks 
+.arrivals_single_marks
 {
 	display: block;
 	position: absolute;
@@ -3457,9 +3442,9 @@ select option
 {
 	font-size: 16px;
 	color: rgba(0,0,0,0.3);
-} 
+}
 .newsletter_input:-ms-input-placeholder
-{ 
+{
 	font-size: 16px;
 	color: rgba(0,0,0,0.3);
 }
@@ -3527,10 +3512,10 @@ select option
 .footer .logo
 {
 	top: auto;
-	-webkit-transform: transform: none;
-    -moz-transform: transform: none;
-    -ms-transform: transform: none;
-    -o-transform: transform: none;
+	-webkit-transform:  none;
+    -moz-transform: none;
+    -ms-transform:  none;
+    -o-transform:  none;
     transform: none;
 }
 .footer .logo a
@@ -3622,7 +3607,7 @@ select option
 }
 .footer_list_2
 {
-	margin-top: 42px !important; 
+	margin-top: 42px !important;
 }
 
 .copyright
@@ -3646,7 +3631,7 @@ select option
 }
 .logos
 {
-	
+
 }
 .logos_list li
 {

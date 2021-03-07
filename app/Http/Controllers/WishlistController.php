@@ -23,22 +23,16 @@ class WishlistController extends Controller
                   if (Auth::Check()) {
 
                  if ($check) {
-                    $wishlist = DB::table('wishlists')->where('user_id',$userid)->get();
-                    Session::flush();
-                    Session::put('wishlist', $wishlist);
                   return \Response::json(['error' => 'Product Already Has on your wishlist']);
                  }else{
                      DB::table('wishlists')->insert($data);
-                     $wishlist = DB::table('wishlists')->where('user_id',$userid)->get();
-                     Session::flush();
-                     Session::put('wishlist', $wishlist);
               return \Response::json(['success' => 'Product Added on wishlist']);
 
                  }
 
 
                   }else{
-              return \Response::json(['error' => 'At first login your account']);
+              return \Response::json(['error' => 'At first loing your account']);
 
                   }
 

@@ -29,6 +29,7 @@ class ComposerStaticInite3bae772c4b322f01cd1c02f89ef47e9
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
+        '17d016dc52a631c1e74d2eb8fdd57342' => __DIR__ . '/..' . '/laravel/helpers/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -112,6 +113,7 @@ class ComposerStaticInite3bae772c4b322f01cd1c02f89ef47e9
             'League\\CommonMark\\' => 18,
             'Laravel\\Ui\\' => 11,
             'Laravel\\Tinker\\' => 15,
+            'LamaLama\\Wishlist\\' => 18,
         ),
         'J' => 
         array (
@@ -354,6 +356,10 @@ class ComposerStaticInite3bae772c4b322f01cd1c02f89ef47e9
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
         ),
+        'LamaLama\\Wishlist\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lamalama/laravel-wishlist/src',
+        ),
         'JakubOnderka\\PhpConsoleHighlighter\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-parallel-lint/php-console-highlighter/src',
@@ -477,9 +483,12 @@ class ComposerStaticInite3bae772c4b322f01cd1c02f89ef47e9
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\CartController' => __DIR__ . '/../..' . '/app/Http/Controllers/CartController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\FrontController' => __DIR__ . '/../..' . '/app/Http/Controllers/FrontController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductController.php',
+        'App\\Http\\Controllers\\WishlistController' => __DIR__ . '/../..' . '/app/Http/Controllers/WishlistController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -501,6 +510,7 @@ class ComposerStaticInite3bae772c4b322f01cd1c02f89ef47e9
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\Wishlist\\HasWishlists' => __DIR__ . '/../..' . '/app/Wishlist/HasWishlists.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonConverterInterface' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonConverterInterface.php',
@@ -2425,6 +2435,11 @@ class ComposerStaticInite3bae772c4b322f01cd1c02f89ef47e9
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/php-parallel-lint/php-console-color/src/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/php-parallel-lint/php-console-highlighter/src/Highlighter.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+        'LamaLama\\Wishlist\\HasWishlists' => __DIR__ . '/..' . '/lamalama/laravel-wishlist/src/HasWishlists.php',
+        'LamaLama\\Wishlist\\Wishlist' => __DIR__ . '/..' . '/lamalama/laravel-wishlist/src/Wishlist.php',
+        'LamaLama\\Wishlist\\WishlistFacade' => __DIR__ . '/..' . '/lamalama/laravel-wishlist/src/WishlistFacade.php',
+        'LamaLama\\Wishlist\\WishlistServiceProvider' => __DIR__ . '/..' . '/lamalama/laravel-wishlist/src/WishlistServiceProvider.php',
+        'LamaLama\\Wishlist\\Wishlistable' => __DIR__ . '/..' . '/lamalama/laravel-wishlist/src/Wishlistable.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
