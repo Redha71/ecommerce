@@ -69,7 +69,15 @@ class CartController extends Controller
 
            }
 
+           public function removeAllCart(){
+            Cart::destroy();
+            $notification=array(
+                            'messege'=>'Remove all product form Cart',
+                            'alert-type'=>'success'
+                             );
+                           return Redirect()->back()->with($notification);
 
+        }
            public function UpdateCart(Request $request){
 
                $rowId = $request->productid;
@@ -160,9 +168,17 @@ class CartController extends Controller
 
           public function Checkout(){
          if (Auth::check()) {
+            if(Cart::count()>0){
+                $cart = Cart::content();
+                return view('pages.checkout',compact('cart'));
+            }else{
+                $notification=array(
+                    'messege'=>'At first add item to your cart',
+                    'alert-type'=>'success'
+                     );
+                     return Redirect()->route('welcome')->with($notification);
+            }
 
-             $cart = Cart::content();
-               return view('pages.checkout',compact('cart'));
 
          }else{
              $notification=array(
@@ -179,14 +195,23 @@ class CartController extends Controller
           $userid = Auth::id();
           $product = DB::table('wishlists')
                   ->join('products','wishlists.product_id','products.id')
-                  ->select('products.*','wishlists.user_id')
+                  ->select('products.*','wishlists.user_id','wishlists.id')
                   ->where('wishlists.user_id',$userid)
                   ->get();
                  // return response()->json($product);
                   return view('pages.wishlist',compact('product'));
 
           }
-
+          public function deleteWishlist($id){
+            $product = DB::table('wishlists')->where('id',$id)->delete();
+            $userid = Auth::id();
+          $product = DB::table('wishlists')
+                  ->join('products','wishlists.product_id','products.id')
+                  ->select('products.*','wishlists.user_id','wishlists.id')
+                  ->where('wishlists.user_id',$userid)
+                  ->get();
+            return view('pages.wishlist',compact('product'));
+          }
 
           public function Coupon(Request $request){
               $coupon = $request->coupon;
