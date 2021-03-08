@@ -2,6 +2,7 @@
 
 // Socialite Route
 
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -9,11 +10,10 @@ Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
 Route::get('/callback/{provider}', 'SocialController@callback');
 
 
-Route::get('/','FrontController@index');
+Route::get('/','FrontController@index' );
 //auth & user
 Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/testcode', 'FrontController@testcode')->name('testcode');
 Route::get('/password/change', 'HomeController@changePassword')->name('password.change');
 Route::post('/password/update', 'HomeController@updatePassword')->name('password.update');
 Route::get('/user/logout', 'HomeController@Logout')->name('user.logout');
