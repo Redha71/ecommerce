@@ -2,6 +2,7 @@
 
 @section('content')
 @include('layouts.menubar')
+@include('layouts.slider')
   <!-- Characteristics -->
 
 

@@ -2,10 +2,7 @@
         <!-- Main Navigation -->
 @php
 $category = DB::table('categories')->get();
-$slider = DB::table('products')
-->join('brands','products.brand_id','brands.id')
-->select('products.*','brands.brand_name')
-->where('main_slider',1)->orderBy('id','DESC')->first();
+
 @endphp
         <nav class="main_nav">
             <div class="container">
@@ -30,11 +27,11 @@ $slider = DB::table('products')
                                         @endphp
 
                                         <li class="hassubs">
-                                            <a href="#">{{ $cat->category_name }}<i class="fas fa-chevron-right"></i></a>
+                                            <a href="{{ url('allcategory/'.$cat->id) }}">{{ $cat->category_name }}<i class="fas fa-chevron-right"></i></a>
                                             <ul>
                                                 @foreach ($subcategory as $row)
                                                     <li class="hassubs">
-                                                        <a href="#">{{ $row->subcategory_name }}<i class="fas fa-chevron-right"></i></a>
+                                                        <a href="{{ url('products/'.$row->id) }}">{{ $row->subcategory_name }}<i class="fas fa-chevron-right"></i></a>
 
                                                     </li>
                                                 @endforeach
@@ -95,7 +92,7 @@ $slider = DB::table('products')
                                             <li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
+                                    <li><a href="{{ route('blog.post') }}">Blog<i class="fas fa-chevron-down"></i></a></li>
                                     <li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
                                 </ul>
                             </div>
@@ -205,30 +202,3 @@ $slider = DB::table('products')
 
     </header>
 
-    <!-- Banner -->
-
-    <div class="banner">
-        <!-- The background for main image  -->
-        <div class="banner_background" style="background-image:url({{ asset('public/frontend/images/banner_background.jpg')}})"></div>
-        <div class="container fill_height">
-            <div class="row fill_height">
-                <div class="banner_product_image"><a href="{{ url('product/details/'.$slider->id.'/'.$slider->product_name) }}">
-                    <img src="{{ asset($slider->image_one)}}" alt="" style="height:450px;"></a></div>
-                <div class="col-lg-5 offset-lg-4 fill_height">
-                    <div class="banner_content">
-                        <h1 class="banner_text"><a href="{{ url('product/details/'.$slider->id.'/'.$slider->product_name) }}">
-                            {{ $slider->product_name }}</a></h1>
-                        <div class="banner_price">
-                             @if ($slider->discount_price==NULL)
-                               <h2>£{{ $slider->selling_price }}</h2>
-                             @else
-                             <span>{{ $slider->selling_price }}</span>{{ $slider->discount_price }}
-                             @endif
-                         </div>
-                        <div class="banner_product_name">{{ $slider->brand_name }}</div>
-                        <div class="button banner_button"><a href="#">Shop Now</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>

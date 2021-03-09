@@ -77,7 +77,7 @@ $vat = (float)$setting->vat;
 
                 <div class="cart_item_total cart_info_col">
 					<div class="cart_item_title">Action</div><br>
-	 <a href="{{ url('remove/cart/'.$row->rowId ) }}" class="btn btn-sm btn-danger">x</a>
+	                <a href="{{ url('remove/cart/'.$row->rowId ) }}" class="btn btn-sm btn-danger">x</a>
 				</div>
 
 
@@ -126,9 +126,9 @@ $vat = (float)$setting->vat;
             @if(Session::has('coupon'))
             <li class="list-group-item">Total : <span style="float: right;">${{ Session::get('coupon')['balance'] + $charge + $vat }} </span> </li>
             @else
-    <li class="list-group-item">Total : <span style="float: right;">${{ Cart::Subtotal() + $charge + $vat }} </span> </li>
+            <li class="list-group-item">Total : <span style="float: right;">${{ Cart::Subtotal() + $charge + $vat }} </span> </li>
             @endif
-        
+
 
 
           </ul>

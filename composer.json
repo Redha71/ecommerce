@@ -11,11 +11,15 @@
         "php": "^7.2",
         "bumbummen99/shoppingcart": "^4.0",
         "fideloper/proxy": "^4.0",
+        "guzzlehttp/guzzle": "6.0",
         "intervention/image": "^2.5",
         "lamalama/laravel-wishlist": "^0.2.1",
         "laravel/framework": "^6.0",
         "laravel/helpers": "^1.4",
-        "laravel/tinker": "^1.0"
+        "laravel/passport": "9.0",
+        "laravel/tinker": "^1.0",
+        "stripe/stripe-php": "^7.75",
+        "symfony/psr-http-message-bridge": "^2.1"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
