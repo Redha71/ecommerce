@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '86798b77cd223f20e836f698bd888429b356916c',
+    'reference' => 'ec966cd0464fa7c228a6cb9dd2a0b58a570bfd70',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -223,196 +223,196 @@ private static $installed = array (
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/broadcasting' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/bus' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/cache' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/config' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/console' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/container' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/contracts' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/cookie' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/database' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/encryption' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/events' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/filesystem' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/hashing' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/http' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/log' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/mail' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/notifications' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/pagination' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/pipeline' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/queue' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/redis' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/routing' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/session' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/support' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/translation' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/validation' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'illuminate/view' => 
     array (
       'replaced' => 
       array (
-        0 => 'v6.20.17',
+        0 => 'v6.20.18',
       ),
     ),
     'intervention/image' => 
@@ -474,12 +474,12 @@ private static $installed = array (
     ),
     'laravel/framework' => 
     array (
-      'pretty_version' => 'v6.20.17',
-      'version' => '6.20.17.0',
+      'pretty_version' => 'v6.20.18',
+      'version' => '6.20.18.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd0e4731e92ca88f4a78fe9e0c2c426a3e8c063c8',
+      'reference' => '784f8ff1469a0bb288600d2bb9e02541c8e38a8d',
     ),
     'laravel/helpers' => 
     array (
@@ -497,7 +497,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '86798b77cd223f20e836f698bd888429b356916c',
+      'reference' => 'ec966cd0464fa7c228a6cb9dd2a0b58a570bfd70',
     ),
     'laravel/passport' => 
     array (
@@ -1077,12 +1077,12 @@ private static $installed = array (
     ),
     'swiftmailer/swiftmailer' => 
     array (
-      'pretty_version' => 'v6.2.6',
-      'version' => '6.2.6.0',
+      'pretty_version' => 'v6.2.7',
+      'version' => '6.2.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd2791ff0b73247cdc2096b14f5580aba40c12bff',
+      'reference' => '15f7faf8508e04471f666633addacf54c0ab5933',
     ),
     'symfony/console' => 
     array (
@@ -1370,12 +1370,12 @@ private static $installed = array (
     ),
     'webmozart/assert' => 
     array (
-      'pretty_version' => '1.9.1',
-      'version' => '1.9.1.0',
+      'pretty_version' => '1.10.0',
+      'version' => '1.10.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'bafc69caeb4d49c39fd0779086c03a3738cbb389',
+      'reference' => '6964c76c7804814a842473e0c8fd15bab0f18e25',
     ),
     'zendframework/zend-diactoros' => 
     array (
